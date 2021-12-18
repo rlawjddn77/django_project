@@ -13,11 +13,11 @@ Bookmark List
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">#</th>
-        <th scope="col">Site</th>
-        <th scope="col">URL</th>
-        <th scope="col">Modify</th>
-        <th scope="col">Delete</th>
+        <th scope="col">번호</th>
+        <th scope="col">사이트 이름</th>
+        <th scope="col">사이트 URL</th>
+        <th scope="col">수정</th>
+        <th scope="col">삭제</th>
     </tr>
     </thead>
 
@@ -27,8 +27,8 @@ Bookmark List
             <td>{{forloop.counter}}</td>
             <td><a href="{% url 'bookmark:detail' pk=bookmark.id %}">{{bookmark.site_name}}</a></td>
             <td><a href="{{bookmark.url}}" target="_blank">{{bookmark.url}}</a></td>
-            <td><a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">Modify</a></td>
-            <td><a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">Delete</a></td>
+            <td><a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">수정</a></td>
+            <td><a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">삭제</a></td>
         </tr>
     {% endfor %}
     </tbody>
