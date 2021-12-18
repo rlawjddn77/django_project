@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Delete {% endblock %}
+
+{%block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="alert alert-danger">글을 지우시겠습니까?</div>
+    <input type="submit" value="Delete" class="btn btn-danger">
+</form>
+{% endblock %}

@@ -3,7 +3,14 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
+<div class="page-header">
+    {% if user.is_authenticated %}
+    <a href="{% url 'blog:post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    {% endif %}
+    <h1><a href="{% url 'blog:post_list' %}">My Home</a> </h1>
+</div>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
-<h4>Django Project</h4>
 {% endblock %}

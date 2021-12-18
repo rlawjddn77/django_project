@@ -5,24 +5,17 @@ Detail
 {% endblock %}
 
 {% block content%}
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">수정</th>
-        <th scope="col">삭제</th>
-    </tr>
-    </thead>
 
-    <tbody>
-    {% for bookmark in object_list %}
-        <tr>
-            <td>{{forloop.counter}}</td>
-            <td><a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">수정</a></td>
-            <td><a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">삭제</a></td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
 {{object.site_name}}<br>
 {{object.url}}
+<br>
+<body>
+<div class = "btn-group">
+    <a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">수정</a>
+    <a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">삭제</a>
+</div>
+{% endblock %}
+
+{% block pagination %}
+</body>
 {% endblock %}

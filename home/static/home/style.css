@@ -1,16 +1,23 @@
+h1 a {
+    color: #4172FA;
+    font-family: 'Lobster';
+}
+.page-header {
+    background-color: #4172FA;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
 body {
     background: white url("images/background.png") no-repeat;
     background-position: center;
     background-size: 10%;
     height: 500px;
     border-top: 10px solid #ccc;
-}
-
-title{
-    color: #c80;
-    font-weight: bold;
-}
-
-li a{
-    color: green;
 }
